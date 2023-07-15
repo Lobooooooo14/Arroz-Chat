@@ -19,6 +19,7 @@ export const Content = styled.div<{ $sent?: boolean; }>`
 export const Info = styled.div`
     width: 100%;
     margin-bottom: 10px;
+    color: ${props => props.theme.colors.headingColor};
     `
 
 export const Text = styled.div`
