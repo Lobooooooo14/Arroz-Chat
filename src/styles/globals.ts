@@ -7,6 +7,11 @@ export default createGlobalStyle`
         scroll-behavior: smooth;
     }
 
+    html, body, #root {
+        width: 100%;
+        height: 100vh;
+    }
+
     * {
         margin: 0;
         padding: 0;
