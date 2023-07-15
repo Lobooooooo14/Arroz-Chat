@@ -1,9 +1,9 @@
 import React from "react"
 import { Content } from "./styles"
 import Message from "../Message"
-import { DocumentData, addDoc, collection, limit, orderBy, query, serverTimestamp } from "firebase/firestore"
+import { DocumentData, collection, limit, orderBy, query } from "firebase/firestore"
 import { useCollectionData } from "react-firebase-hooks/firestore"
-import { auth, databaseApp } from "../../../services/firebaseConfig"
+import { databaseApp } from "../../../services/firebaseConfig"
 import { IDOptions, InitialValueOptions } from "react-firebase-hooks/firestore/dist/firestore/types"
 
 

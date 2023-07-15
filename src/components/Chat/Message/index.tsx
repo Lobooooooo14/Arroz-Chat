@@ -12,7 +12,7 @@ interface Props {
 const Message: React.FC<Props> = ({ text, uid, createdAt }) => {
     return (
         <Content $sent={uid === auth.currentUser?.uid}>
-            <Info></Info>
+            <Info>{createdAt}</Info>
             <Text>{text}</Text>
         </Content>
     )
