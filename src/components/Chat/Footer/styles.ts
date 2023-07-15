@@ -37,7 +37,7 @@ export const SendBtn = styled.div`
     background-color: ${props => props.theme.colors.secondary};
     transition: all 300ms ease;
 
-    &:hover, &:active {
+    &:active {
         background-color: ${props => shade(0.2, props.theme.colors.secondary)};
     }
 `
