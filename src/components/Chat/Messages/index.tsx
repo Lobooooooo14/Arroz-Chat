@@ -9,13 +9,12 @@ import { IDOptions, InitialValueOptions } from "react-firebase-hooks/firestore/d
 
 const Messages: React.FC = () => {
     const messageRef = collection(databaseApp, "messages")
-    const queryMessages = query(messageRef, orderBy("createdAt"), limit(50))
+    const queryMessages = query(messageRef, orderBy("createdAt", "desc"), limit(50))
     const [messages] = useCollectionData<DocumentData>(queryMessages, { idField: "id"} as IDOptions<DocumentData> & InitialValueOptions<DocumentData[]>)
-
 
     return (
         <Content>
-            {messages && messages?.map((message) => (
+            {messages && messages?.reverse().map((message) => (
                 <Message key={message.id} text={message.text} uid={message.uid} />
             ))}
         </Content>

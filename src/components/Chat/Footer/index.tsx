@@ -26,7 +26,12 @@ const Footer: React.FC = () => {
             />
             <SendBtn>
                 <SendBtnIcon
-                    onClick={() => sendMessage(text)}
+                    onClick={
+                        () => {
+                            (text.length > 0) ? sendMessage(text): ""
+                            setText("")
+                        }
+                    }
                 />
             </SendBtn>
         </Content>

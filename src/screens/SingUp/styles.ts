@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export const Content = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
