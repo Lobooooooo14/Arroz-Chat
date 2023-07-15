@@ -16,7 +16,7 @@ const Messages: React.FC = () => {
     return (
         <Content>
             {messages && messages?.map((message) => (
-                <Message key={message.id} text={message.text} uid={message.uid} createdAt={message.createdAt} />
+                <Message key={message.id} text={message.text} uid={message.uid} />
             ))}
         </Content>
     )

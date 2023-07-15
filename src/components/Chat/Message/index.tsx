@@ -1,18 +1,16 @@
 import React from "react"
-import { Content, Info, Text } from "./styles"
+import { Content, Text } from "./styles"
 import { auth } from "../../../services/firebaseConfig"
 
 
 interface Props {
     text: string
     uid: string
-    createdAt: any
 }
 
-const Message: React.FC<Props> = ({ text, uid, createdAt }) => {
+const Message: React.FC<Props> = ({ text, uid }) => {
     return (
         <Content $sent={uid === auth.currentUser?.uid}>
-            <Info>{createdAt}</Info>
             <Text>{text}</Text>
         </Content>
     )
