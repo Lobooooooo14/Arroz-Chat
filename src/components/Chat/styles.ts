@@ -6,7 +6,7 @@ export const Content = styled.div`
     max-width: 400px;
     height: 100vh;
     display: grid;
-    grid-template-areas: 
+    grid-template: 
         "header" 50px
         "messages" 1fr
         "footer" 50px;
