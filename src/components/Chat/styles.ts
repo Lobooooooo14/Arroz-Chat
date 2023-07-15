@@ -4,7 +4,7 @@ import styled from "styled-components"
 export const Content = styled.div`
     width: 100%;
     max-width: 400px;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template: 
         "header" 50px
