@@ -1,8 +1,9 @@
-import { shade } from "polished";
+import { motion } from "framer-motion";
+import { shade } from "polished"
 import styled from "styled-components"
 
 
-export const Content = styled.div<{ $sent?: boolean; }>`
+export const Content = styled(motion.div)<{ $sent?: boolean; }>`
     max-width: 70%;
     width: fit-content;
     min-width: fit-content;
