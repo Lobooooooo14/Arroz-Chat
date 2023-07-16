@@ -5,7 +5,6 @@ import { auth, databaseApp } from "../../../services/firebaseConfig"
 
 
 const Footer: React.FC = () => {
-
     const [text, setText] = useState("")
 
     const messageRef = collection(databaseApp, "messages")
@@ -18,6 +17,11 @@ const Footer: React.FC = () => {
         })
     }
 
+    const send = (text: string) => {
+        (text.length > 0) ? sendMessage(text): ""
+        setText("")
+    }
+
     return (
         <Content>
             <Input
@@ -25,19 +29,15 @@ const Footer: React.FC = () => {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                        (text.length > 0) ? sendMessage(text): ""
-                        setText("")
+                    if (e.key === "Enter" && !e.shiftKey) {
+                        send(text)
                     }
                 }}
             />
             <SendBtn>
                 <SendBtnIcon
                     onClick={
-                        () => {
-                            (text.length > 0) ? sendMessage(text): ""
-                            setText("")
-                        }
+                        () => send(text)
                     }
                 />
             </SendBtn>

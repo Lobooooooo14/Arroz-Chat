@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { shade } from "polished"
+import { shade, transparentize } from "polished"
 import styled from "styled-components"
 
 
@@ -11,11 +11,20 @@ export const Content = styled(motion.div)<{ $sent?: boolean; }>`
     border-radius: 0 10px 10px 10px;
     padding: 10px;
     margin: 10px 0;
-    background-image: linear-gradient(315deg, ${props => shade(0.7, props.theme.colors.bubbleColor)}, ${props => shade(0.8, props.theme.colors.bubbleColor)});
+    background-image: linear-gradient(
+        315deg,
+        ${props => transparentize(0.2, shade(0.7, props.theme.colors.bubbleColor))},
+        ${props => transparentize(0.3, shade(0.8, props.theme.colors.bubbleColor))}
+    );
+
     ${props => props.$sent && `
         border-radius: 10px 0 10px 10px;
         margin-left: auto;
-        background-image: linear-gradient(45deg, ${shade(0.4, props.theme.colors.bubbleColor)}, ${shade(0.5, props.theme.colors.bubbleColor)});
+        background-image: linear-gradient(
+            45deg,
+            ${transparentize(0.3, shade(0.4, props.theme.colors.bubbleColor))},
+            ${transparentize(0.2, shade(0.5, props.theme.colors.bubbleColor))}
+        );
     `}
 `
 

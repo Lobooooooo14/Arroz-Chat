@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 import { Content } from "./styles"
-import Message from "../Message"
+import Bubble from "../Bubble"
 import { DocumentData, collection, limit, orderBy, query } from "firebase/firestore"
 import { useCollectionData } from "react-firebase-hooks/firestore"
 import { databaseApp } from "../../../services/firebaseConfig"
@@ -16,12 +16,13 @@ const Messages: React.FC = () => {
     const [messages] = useCollectionData<DocumentData>(queryMessages, { idField: "id"} as IDOptions<DocumentData> & InitialValueOptions<DocumentData[]>)
 
     dummy.current?.scrollIntoView({behavior: 'smooth'})
+    
     return (
         <Content
             ref={scrollRef}
         >
             {messages && messages?.reverse().map((message, index) => (
-                <Message
+                <Bubble
                     key={index}
                     text={message.text}
                     uid={message.uid}
