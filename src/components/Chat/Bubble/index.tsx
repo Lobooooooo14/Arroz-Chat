@@ -10,7 +10,7 @@ interface Props {
     scrollRef: React.RefObject<HTMLDivElement>
 }
 
-const Message: React.FC<Props> = ({ text, uid, username, scrollRef }) => {
+const Bubble: React.FC<Props> = ({ text, uid, username, scrollRef }) => {
     
 
     return (
@@ -28,4 +28,4 @@ const Message: React.FC<Props> = ({ text, uid, username, scrollRef }) => {
     )
 }
 
-export default Message
+export default Bubble
