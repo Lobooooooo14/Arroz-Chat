@@ -4,7 +4,7 @@ export default {
         primary: "#fb00ff",
         secondary: "#9e00ff",
         primaryScreenGradient: "#fa00ff",
-        secondaryScreenGradient: "#110011",
+        secondaryScreenGradient: "#230023",
         bubbleColor: "gray",
         headingColor: "white",
         textColor: "rgb(230, 230, 230)",
