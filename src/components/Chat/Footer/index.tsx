@@ -18,8 +18,10 @@ const Footer: React.FC = () => {
     }
 
     const send = (text: string) => {
-        (text.length > 0) ? sendMessage(text): ""
-        setText("")
+        if (text.trim().length > 0) {
+            sendMessage(text)
+            setText("")
+        }
     }
 
     return (
