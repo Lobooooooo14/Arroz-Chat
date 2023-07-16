@@ -6,6 +6,8 @@ declare module "styled-components" {
         colors: {
             primary: string
             secondary: string
+            primaryScreenGradient: string
+            secondaryScreenGradient: string
             primaryGradient: string
             secondaryGradient: string
             headingColor: string
@@ -16,6 +18,7 @@ declare module "styled-components" {
             error: string
             warn: string
             success: string
+            bubbleColor: string
         }
     }
 }

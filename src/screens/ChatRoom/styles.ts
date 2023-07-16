@@ -1,5 +1,5 @@
-import styled from "styled-components"
 import { shade } from "polished"
+import styled from "styled-components"
 
 
 export const Content = styled.div`
@@ -7,5 +7,5 @@ export const Content = styled.div`
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: ${props => shade(0.2, props.theme.colors.background)};
+    background-image: linear-gradient(45deg, ${props => props.theme.colors.secondaryScreenGradient}, ${props => shade(0.8, props.theme.colors.primaryScreenGradient)});
 `

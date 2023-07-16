@@ -1,10 +1,13 @@
 export default {
     name: "dark",
     colors: {
-        primary: "#a31e92",
-        secondary: "#e22aca",
-        primaryGradient: "#a31e92",
-        secondaryGradient: "#ea2c7e",
+        primary: "#ff0059",
+        secondary: "#9e00ff",
+        primaryScreenGradient: "#fa00ff",
+        secondaryScreenGradient: "black",
+        primaryGradient: "gray",
+        secondaryGradient: "black",
+        bubbleColor: "gray",
         headingColor: "white",
         textColor: "rgb(230, 230, 230)",
         background: "#1a1a1a",

@@ -7,11 +7,13 @@ export const Content = styled.div`
     grid-area: header;
     width: 100%;
     height: 100%;
-    background-color: ${props => props.theme.colors.primary};
+    background-color: transparent;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 0 20px 0 ${props => transparentize(0.6, props.theme.colors.shadow)};
+    z-index: 1;
 `
 
 export const AppName = styled.h2`
