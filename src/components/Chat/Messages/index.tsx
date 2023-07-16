@@ -15,7 +15,7 @@ const Messages: React.FC = () => {
     return (
         <Content>
             {messages && messages?.reverse().map((message) => (
-                <Message key={message.id} text={message.text} uid={message.uid} />
+                <Message key={message.id} text={message.text} uid={message.uid} username={message.username}/>
             ))}
         </Content>
     )

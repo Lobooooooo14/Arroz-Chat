@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
         await addDoc(messageRef, {
             text: text,
             uid: auth.currentUser?.uid,
+            username: auth.currentUser?.displayName,
             createdAt: serverTimestamp()
         })
     }

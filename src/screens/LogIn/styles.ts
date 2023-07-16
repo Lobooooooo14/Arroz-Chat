@@ -11,7 +11,7 @@ export const Content = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${props => props.theme.colors.background};
-    background-image: linear-gradient(135deg, ${props => shade(0.3, props.theme.colors.primaryGradient)}, ${props => shade(0.9, props.theme.colors.secondaryGradient)});
+    background-image: linear-gradient(135deg, ${props => shade(0.3, props.theme.colors.primaryScreenGradient)}, ${props => shade(0.9, props.theme.colors.secondaryScreenGradient)});
     color: ${props => props.theme.colors.textColor};
     overflow-y: hidden;
 `
