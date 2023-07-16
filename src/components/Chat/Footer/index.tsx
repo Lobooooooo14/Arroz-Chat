@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 onKeyDown={(e) => {
-                    if (e.key === "Enter") {
+                    if (e.key === "Enter" && !e.shiftKey) {
                         send(text)
                     }
                 }}
