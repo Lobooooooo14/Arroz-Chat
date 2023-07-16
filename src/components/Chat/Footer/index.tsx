@@ -24,6 +24,12 @@ const Footer: React.FC = () => {
                 placeholder="Digite sua mensagem..."
                 value={text}
                 onChange={(e) => setText(e.target.value)}
+                onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                        (text.length > 0) ? sendMessage(text): ""
+                        setText("")
+                    }
+                }}
             />
             <SendBtn>
                 <SendBtnIcon
