@@ -1,13 +1,13 @@
 import styled from "styled-components"
 import { PiSignOutBold } from "react-icons/pi"
-import { transparentize } from "polished"
+import { shade, transparentize } from "polished"
 
 
 export const Content = styled.div`
     grid-area: header;
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background-color:${props => shade(0.5, props.theme.colors.secondary)};
     padding: 10px;
     display: flex;
     justify-content: space-between;

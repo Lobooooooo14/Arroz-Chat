@@ -8,8 +8,6 @@ declare module "styled-components" {
             secondary: string
             primaryScreenGradient: string
             secondaryScreenGradient: string
-            primaryGradient: string
-            secondaryGradient: string
             headingColor: string
             textColor: string
             background: string
