@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { shade } from "polished"
 
+
 export const StyledButton = styled.button`
     width: 100%;
     background-color: ${props => props.theme.colors.primary};
@@ -11,7 +12,7 @@ export const StyledButton = styled.button`
     font-size: 14pt;
 
     &:hover, &:active {
-        background-color: ${ props => shade(0.2, props.theme.colors.secondary)};
+        background-color: ${props => shade(0.2, props.theme.colors.secondary)};
     }
 
     &:disabled {

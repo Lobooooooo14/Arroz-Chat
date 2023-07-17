@@ -1,32 +1,23 @@
-import React, { useEffect } from 'react'
-import { NavigateFunction, useNavigate } from 'react-router-dom'
-// import { validateEmail, validatePassword } from '../../App'
+import React, { useEffect } from "react"
+import { NavigateFunction, useNavigate } from "react-router-dom"
+import { useSignInWithGoogle, useAuthState } from 'react-firebase-hooks/auth'
+
 import { 
     Box, 
-    Content, 
-    // Form, 
-    // Input, 
-    // Inputs, 
-    LogoBox, 
-    // Messages,
-    // ErrorsMessages,
-    OthersMethods,
-    GoogleLoginIcon
+    Content,
+    LogoBox,
+    LogInBox,
+    GoogleIcon,
+    ContinueWithButton
 } from './styles'
-import { 
-    // useSignInWithEmailAndPassword,
-    useSignInWithGoogle,
-    useAuthState
-} from 'react-firebase-hooks/auth'
 
 import LeafIcon from '../../assets/LeafIcon'
-// import { StyledButton } from '../../components/Button/styles'
 import { auth } from '../../services/firebaseConfig'
 
 
 const SignUp: React.FC = () => {
-    const [user] = useAuthState(auth)
     const navigate: NavigateFunction = useNavigate()
+    const [user] = useAuthState(auth)
 
     useEffect(() => {
         if (user) {
@@ -35,100 +26,44 @@ const SignUp: React.FC = () => {
         }
     }, [user])
 
-    
-    // const [password, setPassword] = useState('')
-    // const [email, setEmail] = useState('')
-    
-    // const [
-    //     signInWithEmailAndPassword,
-    //     // user,
-    //     // loading,
-    //     // error,
-    //   ] = useSignInWithEmailAndPassword(auth)
-
     const [
         signInWithGoogle,
         // user,
         // loading,
         // error,
-      ] = useSignInWithGoogle(auth)
-
-    // const handleInputEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     setEmail(event.target.value)
-    // }
+    ] = useSignInWithGoogle(auth)
     
-    // const handleInputPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     setPassword(event.target.value)
-    // }
-
     return (
-        <>
-            <Content>
-                <Box
+        <Content>
+            <Box
+                initial={{ y: "100%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ type: "spring", duration: 1}}
+            >
+                <LogoBox
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     transition={{ type: "spring", duration: 1}}
                 >
+                    <LeafIcon />    
                     <h2>Arroz Chat</h2>
-                    <LogoBox>
-                        <LeafIcon />    
-                    </LogoBox>
-                    <p>Logar com:</p>
-                    <OthersMethods>
-                        <GoogleLoginIcon
-                            onClick={() => signInWithGoogle()}
-                        />
-                    </OthersMethods>
-                    {/*
-                    <Form>
-                        <Inputs>
-                            <Input
-                                type="email"
-                                placeholder="Email"
-                                autoComplete="email"
-                                onChange={handleInputEmail}
-                            />
-                            <Input
-                                type="password"
-                                placeholder="Senha"
-                                maxLength={32}
-                                minLength={8}
-                                autoComplete="curret-password"
-                                onChange={handleInputPassword}
-                            />
-                        </Inputs>
-                        <Messages>
-                            <div style={{
-                                overflow: "auto",
-                                maxHeight: "100px",
-                                marginBottom: "10px"
-                            }}>
-                                <ErrorsMessages>
-                                    
-                                </ErrorsMessages>
-                            </div>
-                            <OthersMethods>
-                                <GoogleLoginIcon  onClick={
-                                    () => signInWithGoogle()
-                                        .then(() => navigate("/"))
-                                    }
-                                />
-                            </OthersMethods>
-                             <br/>
-                            <p>
-                                Não tem uma conta?
-                                <span onClick={() => navigate("/signup")}> Cadastre-se</span>
-                            </p> 
-                        </Messages>
-                        {
-                            validateEmail(email) &&
-                            validatePassword(password) 
-                            ? <StyledButton onClick={() => signInWithEmailAndPassword(email, password)}>Entrar</StyledButton> : <StyledButton disabled>Entrar</StyledButton>
-                        }
-                    </Form>*/}
-                </Box>
-            </Content>
-        </>
+                </LogoBox>
+                <LogInBox
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ type: "spring", duration: 2}}
+                >
+                    <ContinueWithButton
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: "spring", stiffness: 700, damping: 20 }}
+                        onClick={() => signInWithGoogle()}
+                    >
+                        <GoogleIcon/>
+                        Continuar com o Google
+                    </ContinueWithButton>
+                </LogInBox>
+            </Box>
+        </Content>
     )
 }
 

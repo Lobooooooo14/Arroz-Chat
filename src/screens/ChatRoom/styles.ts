@@ -7,5 +7,9 @@ export const Content = styled.div`
     height: 100%;
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(45deg, ${props => props.theme.colors.secondaryScreenGradient}, ${props => shade(0.8, props.theme.colors.primaryScreenGradient)});
+    background-image: linear-gradient(
+        45deg, 
+        ${props => props.theme.colors.secondaryScreenGradient}, 
+        ${props => shade(0.6, props.theme.colors.secondary)}
+    );
 `

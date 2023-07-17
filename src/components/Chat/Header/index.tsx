@@ -1,5 +1,7 @@
 import React from "react"
+
 import { Content, AppName, SignOutIcon } from "./styles"
+
 import { auth } from "../../../services/firebaseConfig"
 
 
