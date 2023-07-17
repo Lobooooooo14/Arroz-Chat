@@ -7,12 +7,12 @@ export const Content = styled.div`
     grid-area: footer;
     width: 100%;
     height: 100%;
-    background-color: transparent;
-    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    background-color: transparent;
+    padding: 5px 10px;
     box-shadow: 0 0 20px 0 ${props => transparentize(0.6, props.theme.colors.shadow)};
     z-index: 1;
 `

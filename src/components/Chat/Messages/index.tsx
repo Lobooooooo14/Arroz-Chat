@@ -1,10 +1,19 @@
 import React, { useRef } from "react"
-import { Content } from "./styles"
-import Bubble from "../Bubble"
-import { DocumentData, collection, limit, orderBy, query } from "firebase/firestore"
 import { useCollectionData } from "react-firebase-hooks/firestore"
-import { databaseApp } from "../../../services/firebaseConfig"
+import {
+    DocumentData,
+    collection,
+    limit,
+    orderBy,
+    query 
+} from "firebase/firestore"
 import { IDOptions, InitialValueOptions } from "react-firebase-hooks/firestore/dist/firestore/types"
+
+import { Content } from "./styles"
+
+import Bubble from "../Bubble"
+
+import { databaseApp } from "../../../services/firebaseConfig"
 
 
 const Messages: React.FC = () => {

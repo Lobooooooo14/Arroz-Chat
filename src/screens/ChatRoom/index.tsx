@@ -1,10 +1,12 @@
 import React, { useEffect } from "react"
-import { Content } from "./styles"
 import { useAuthState } from "react-firebase-hooks/auth"
-import { auth } from "../../services/firebaseConfig"
 import { NavigateFunction, useNavigate } from "react-router-dom"
 
+import { Content } from "./styles"
+
 import Chat from "../../components/Chat"
+
+import { auth } from "../../services/firebaseConfig"
 
 
 const ChatRoom: React.FC = () => {

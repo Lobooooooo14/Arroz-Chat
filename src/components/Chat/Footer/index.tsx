@@ -1,6 +1,8 @@
 import React, { useState } from "react"
-import { Content, Input, SendBtn, SendBtnIcon } from "./styles"
 import { addDoc, collection, serverTimestamp } from "firebase/firestore"
+
+import { Content, Input, SendBtn, SendBtnIcon } from "./styles"
+
 import { auth, databaseApp } from "../../../services/firebaseConfig"
 
 
@@ -31,9 +33,7 @@ const Footer: React.FC = () => {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 onKeyDown={(e) => {
-                    if (e.key === "Enter" && !e.shiftKey) {
-                        send(text)
-                    }
+                    if (e.key === "Enter" && !e.shiftKey) send(text)
                 }}
             />
             <SendBtn>

@@ -7,11 +7,11 @@ export const Content = styled.div`
     grid-area: header;
     width: 100%;
     height: 100%;
-    background-color:${props => shade(0.5, props.theme.colors.secondary)};
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color:${props => shade(0.5, props.theme.colors.secondary)};
+    padding: 10px;
     box-shadow: 0 0 20px 0 ${props => transparentize(0.6, props.theme.colors.shadow)};
     z-index: 1;
 `
