@@ -30,4 +30,4 @@ You can contribute to Arroz Chat by forking this repository, implementing your c
 
 ## License
 
-Arroz Chat is under GNU license. see [LICENSE](./LICENSE) for more details.
+Arroz Chat is under `GPL-3.0` license. see [LICENSE](./LICENSE) for more details.
