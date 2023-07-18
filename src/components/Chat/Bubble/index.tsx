@@ -16,9 +16,8 @@ const Bubble: React.FC<Props> = ({ text, uid, username, scrollRef }) => {
     return (
         <Content
             $sent={uid === auth.currentUser?.uid}
-            whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 700, damping: 20 }}
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0.8, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ root: scrollRef }}
         >
