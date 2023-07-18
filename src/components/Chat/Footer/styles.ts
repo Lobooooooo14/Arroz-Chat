@@ -11,7 +11,7 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    background-color: transparent;
+    background-color: ${props => props.theme.colors.primary};
     padding: 5px 10px;
     box-shadow: 0 0 20px 0 ${props => transparentize(0.6, props.theme.colors.shadow)};
     z-index: 1;
@@ -23,7 +23,7 @@ export const Input = styled.input`
     border-radius: 50px;
     padding: 10px;
     color: ${props => props.theme.colors.textColor};
-    background-color: ${props => transparentize(0.6, props.theme.colors.shadow)};
+    background-color: ${props => props.theme.colors.secondary};
 
     &::placeholder {
         color: ${props => transparentize(0.6, props.theme.colors.textColor)};
@@ -36,11 +36,11 @@ export const SendBtn = styled.div`
     height: 100%;
     max-height: 40px;
     border-radius: 50px;
-    background-color: ${props => shade(0.5, props.theme.colors.secondary)};
-    transition: all 300ms ease;
+    background-color: ${props => props.theme.colors.secondary};
+    transition: all 100ms ease;
 
     &:active {
-        background-color: ${props => shade(0.2, props.theme.colors.primary)};
+        background-color: ${props => shade(0.4, props.theme.colors.secondary)};
     }
 `
 

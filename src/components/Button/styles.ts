@@ -21,6 +21,6 @@ export const StyledButton = styled.button`
     }
 
     &:disabled:hover, &:disabled:active {
-        background-color: ${props => props.theme.colors.primary};
+        background-color: ${props => props.theme.colors.secondary};
     }
 `

@@ -8,8 +8,8 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     background-image: linear-gradient(
-        45deg, 
-        ${props => props.theme.colors.secondaryScreenGradient}, 
-        ${props => shade(0.6, props.theme.colors.secondary)}
+        45deg,
+        ${props => shade(0.9, props.theme.colors.primary)},
+        ${props => shade(0.8, props.theme.colors.primary)}
     );
 `

@@ -10,12 +10,11 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.textColor};
     background-image: linear-gradient(
-        45deg, 
-        ${props => props.theme.colors.secondaryScreenGradient}, 
-        ${props => shade(0.6, props.theme.colors.secondary)}
+        45deg,
+        ${props => shade(0.9, props.theme.colors.secondary)},
+        ${props => shade(0.8, props.theme.colors.secondary)}
         );
     overflow-y: hidden;
 `
@@ -37,11 +36,12 @@ export const ContinueWithButton = styled(motion.div)`
     align-items: center;
     gap: 10px;
     padding: 5px 10px;
-    background-color: ${props => props.theme.colors.secondary};
+    background-color: ${props => props.theme.colors.primary};
     border-radius: 50px;
+    transition: background 100ms ease;
 
     &:active {
-        background-color: ${props => props.theme.colors.primary};
+        background-color: ${props => props.theme.colors.secondary};
     }
 `
 
