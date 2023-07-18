@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { PiSignOutBold } from "react-icons/pi"
-import { shade, transparentize } from "polished"
+import { transparentize } from "polished"
 
 
 export const Content = styled.div`
@@ -10,7 +10,7 @@ export const Content = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:${props => shade(0.5, props.theme.colors.secondary)};
+    background-color: ${props => props.theme.colors.primary};
     padding: 10px;
     box-shadow: 0 0 20px 0 ${props => transparentize(0.6, props.theme.colors.shadow)};
     z-index: 1;
