@@ -32,3 +32,17 @@ export const SignOutIcon = styled(PiSignOutBold)`
         fill: ${props => transparentize(0.2, props.theme.colors.iconColor)};
     }
 `
+
+export const LeftContent = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+`
+
+export const RightContent = styled(LeftContent)``
+
+export const Avatar = styled.img`
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+`
