@@ -4,9 +4,8 @@ import styled from "styled-components"
 
 
 export const Content = styled(motion.div)<{ $sent?: boolean; }>`
-    max-width: 70%;
+    max-width: 80%;
     width: fit-content;
-    min-width: fit-content;
     background-color: transparent;
     border-radius: 0 10px 10px 10px;
     padding: 10px;

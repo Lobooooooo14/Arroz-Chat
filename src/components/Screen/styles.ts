@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { shade } from "polished"
 import styled from "styled-components"
 
@@ -12,4 +13,10 @@ export const Content = styled.div`
         ${props => shade(0.9, props.theme.colors.primary)},
         ${props => shade(0.8, props.theme.colors.primary)}
     );
+`
+
+export const Warpper = styled(motion.div)`
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
 `
