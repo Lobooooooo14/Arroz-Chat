@@ -17,6 +17,6 @@ export const Content = styled.div`
 
 export const Warpper = styled(motion.div)`
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     height: 100%;
 `

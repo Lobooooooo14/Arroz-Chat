@@ -10,6 +10,13 @@ export default createGlobalStyle`
     html, body, #root {
         width: 100%;
         height: 100%;
+        transition: font-size 100ms ease;
+    }
+
+    @media not (max-width: 800px) {
+        body {
+            font-size: 16pt;
+        }
     }
 
     * {

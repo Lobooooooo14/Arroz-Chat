@@ -28,6 +28,7 @@ export const Options = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     background-color: ${props => props.theme.colors.background};
     padding: 10px;
@@ -36,6 +37,7 @@ export const Options = styled.div`
 
 export const Option = styled.div`
     width: 100%;
+    max-width: 600px;
     display: flex;
     justify-content: space-between;
     align-items: center;
