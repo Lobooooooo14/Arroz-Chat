@@ -1,6 +1,10 @@
 import React, { useEffect } from "react"
 import { NavigateFunction, useNavigate } from "react-router-dom"
-import { useSignInWithGoogle, useAuthState } from 'react-firebase-hooks/auth'
+import {
+    useSignInWithGoogle,
+    useSignInWithGithub,
+    useAuthState
+} from 'react-firebase-hooks/auth'
 
 import { 
     Box, 
@@ -8,6 +12,7 @@ import {
     LogoBox,
     LogInBox,
     GoogleIcon,
+    GithubIcon,
     ContinueWithButton
 } from './styles'
 
@@ -26,12 +31,8 @@ const SignUp: React.FC = () => {
         }
     }, [user])
 
-    const [
-        signInWithGoogle,
-        // user,
-        // loading,
-        // error,
-    ] = useSignInWithGoogle(auth)
+    const [signInWithGoogle] = useSignInWithGoogle(auth)
+    const [signInWithGithub] = useSignInWithGithub(auth)
     
     return (
         <Content>
@@ -60,6 +61,14 @@ const SignUp: React.FC = () => {
                     >
                         <GoogleIcon/>
                         Continuar com o Google
+                    </ContinueWithButton>
+                    <ContinueWithButton
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ type: "spring", stiffness: 700, damping: 20 }}
+                        onClick={() => signInWithGithub()}
+                    >
+                        <GithubIcon/>
+                        Continuar com o Github
                     </ContinueWithButton>
                 </LogInBox>
             </Box>

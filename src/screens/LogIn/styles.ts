@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { shade } from "polished"
 import { FcGoogle } from "react-icons/fc"
+import { BsGithub } from "react-icons/bs"
 import { motion } from "framer-motion"
 
 
@@ -57,6 +58,10 @@ export const GoogleIcon = styled(LoginIcon).attrs({
     border-radius: 50px;
     padding: 5px;
 `
+
+export const GithubIcon = styled(LoginIcon).attrs({
+    as: BsGithub
+})``
 
 export const LogoBox = styled(motion.div)`
     display: flex;
