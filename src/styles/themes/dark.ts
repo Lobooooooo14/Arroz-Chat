@@ -11,7 +11,7 @@ export default {
         background: "#1a1a1a",
         iconColor: "white",
         shadow: "black",
-        error: "red",
+        error: "#cc0000",
         warn: "yellow",
         success: "green",
     }
