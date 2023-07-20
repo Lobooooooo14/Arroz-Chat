@@ -4,7 +4,7 @@ import {
     useSignInWithGoogle,
     useSignInWithGithub,
     useAuthState
-} from 'react-firebase-hooks/auth'
+} from "react-firebase-hooks/auth"
 
 import { 
     Box, 
@@ -14,10 +14,12 @@ import {
     GoogleIcon,
     GithubIcon,
     ContinueWithButton
-} from './styles'
+} from "./styles"
 
-import LeafIcon from '../../assets/LeafIcon'
-import { auth } from '../../services/firebaseConfig'
+import LeafIcon from "../../assets/LeafIcon"
+import Screen from "../../components/Screen"
+
+import { auth } from "../../services/firebaseConfig"
 
 
 const SignUp: React.FC = () => {
@@ -35,44 +37,46 @@ const SignUp: React.FC = () => {
     const [signInWithGithub] = useSignInWithGithub(auth)
     
     return (
-        <Content>
-            <Box
-                initial={{ y: "100%", opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring", duration: 1}}
-            >
-                <LogoBox
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
+        <Screen title="Login">
+            <Content>
+                <Box
+                    initial={{ y: "100%", opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
                     transition={{ type: "spring", duration: 1}}
                 >
-                    <LeafIcon />    
-                    <h2>Arroz Chat</h2>
-                </LogoBox>
-                <LogInBox
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    transition={{ type: "spring", duration: 2}}
-                >
-                    <ContinueWithButton
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ type: "spring", stiffness: 700, damping: 20 }}
-                        onClick={() => signInWithGoogle()}
+                    <LogoBox
+                        initial={{ y: "100%" }}
+                        animate={{ y: 0 }}
+                        transition={{ type: "spring", duration: 1}}
                     >
-                        <GoogleIcon/>
-                        Continuar com o Google
-                    </ContinueWithButton>
-                    <ContinueWithButton
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ type: "spring", stiffness: 700, damping: 20 }}
-                        onClick={() => signInWithGithub()}
+                        <LeafIcon />    
+                        <h2>Arroz Chat</h2>
+                    </LogoBox>
+                    <LogInBox
+                        initial={{ y: "100%" }}
+                        animate={{ y: 0 }}
+                        transition={{ type: "spring", duration: 2}}
                     >
-                        <GithubIcon/>
-                        Continuar com o Github
-                    </ContinueWithButton>
-                </LogInBox>
-            </Box>
-        </Content>
+                        <ContinueWithButton
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ type: "spring", stiffness: 700, damping: 20 }}
+                            onClick={() => signInWithGoogle()}
+                        >
+                            <GoogleIcon/>
+                            Continuar com o Google
+                        </ContinueWithButton>
+                        <ContinueWithButton
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ type: "spring", stiffness: 700, damping: 20 }}
+                            onClick={() => signInWithGithub()}
+                        >
+                            <GithubIcon/>
+                            Continuar com o Github
+                        </ContinueWithButton>
+                    </LogInBox>
+                </Box>
+            </Content>
+        </Screen>
     )
 }
 

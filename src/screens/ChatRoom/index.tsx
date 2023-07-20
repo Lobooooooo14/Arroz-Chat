@@ -20,7 +20,7 @@ const ChatRoom: React.FC = () => {
     }, [user])
     
     return (
-        <Screen>
+        <Screen title="Arroz Chat">
             <Chat />
         </Screen>
     )

@@ -23,7 +23,7 @@ const Settings: React.FC = () => {
     const navigate: NavigateFunction = useNavigate()
     
     return (
-        <Screen>
+        <Screen title="Configurações">
             <Content>
                 <Header>
                     <LeftHeader>
