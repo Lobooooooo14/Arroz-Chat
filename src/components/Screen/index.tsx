@@ -4,10 +4,13 @@ import { Content, Warpper } from "./styles"
 
 
 interface Props {
+    title: string
     children?: React.ReactNode
 }
 
-const Screen: React.FC<Props> = ({ children }) => {
+const Screen: React.FC<Props> = ({ title, children }) => {
+    document.title = title
+
     return (
         <Content>
             <Warpper

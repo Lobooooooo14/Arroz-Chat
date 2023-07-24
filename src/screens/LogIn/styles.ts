@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { shade } from "polished"
 import { FcGoogle } from "react-icons/fc"
 import { BsGithub } from "react-icons/bs"
 import { motion } from "framer-motion"
@@ -11,12 +10,6 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${props => props.theme.colors.textColor};
-    background-image: linear-gradient(
-        45deg,
-        ${props => shade(0.9, props.theme.colors.secondary)},
-        ${props => shade(0.8, props.theme.colors.secondary)}
-        );
     overflow-y: hidden;
 `
 
@@ -29,6 +22,7 @@ export const Box = styled(motion.div)`
     gap: 20px;
     padding: 10px;
     border-radius: 10px;
+    color: ${props => props.theme.colors.textColor};
 `
 
 export const ContinueWithButton = styled(motion.div)`
