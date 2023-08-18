@@ -1,12 +1,17 @@
 <h1 align="center">Arroz Chat</h1>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,react,styledcomponents,vite" />
+  <img src="https://skillicons.dev/icons?i=ts,react,styledcomponents,vite,firebase" />
 </p>
 
 ---
 
 Arroz Chat is a chat project that uses Firebase features to build a real-time chat anywhere in the world.
+
+## Notes
+
+- This project is a reimplementation of the [@cookieukw/ArrozChatMaster](https://github.com/cookieukw/ArrozChatMaster/) project.
+- I made this project to learn how to use Firebase with React and other tools. Feel free to contribute.
 
 You can test Arroz Chat at [this link](https://arroz-chat.vercel.app).
 
@@ -15,7 +20,7 @@ You can test Arroz Chat at [this link](https://arroz-chat.vercel.app).
 1. Install the dependencies:
 
    ```shell
-   npm i
+   npm ci
    ```
 
 2. Run:
