@@ -10,14 +10,13 @@ import SignUp from "./screens/SingUp"
 import ChatRoom from "./screens/ChatRoom"
 import Settings from "./screens/Settings"
 
-
 const App: React.FC = () => {
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={dark}>
         <Routes>
-          <Route path="/" element={ <ChatRoom /> } />
+          <Route path="/" element={<ChatRoom />} />
           <Route path="login" element={<LogIn />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="settings" element={<Settings />} />
@@ -35,7 +34,8 @@ export const validateUsername = (username: string) => {
 }
 
 export const validateEmail = (email: string) => {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   return re.test(String(email).toLowerCase())
 }
 

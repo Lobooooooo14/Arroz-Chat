@@ -7,23 +7,22 @@ import Screen from "../../components/Screen"
 
 import { auth } from "../../services/firebaseConfig"
 
-
 const ChatRoom: React.FC = () => {
-    const navigate: NavigateFunction = useNavigate()
-    const [user] = useAuthState(auth)
+  const navigate: NavigateFunction = useNavigate()
+  const [user] = useAuthState(auth)
 
-    useEffect(() => {
-        if (!user) {
-            navigate("/login")
-            return
-        }
-    }, [user])
-    
-    return (
-        <Screen title="Arroz Chat">
-            <Chat />
-        </Screen>
-    )
+  useEffect(() => {
+    if (!user) {
+      navigate("/login")
+      return
+    }
+  }, [user])
+
+  return (
+    <Screen title="Arroz Chat">
+      <Chat />
+    </Screen>
+  )
 }
 
 export default ChatRoom
