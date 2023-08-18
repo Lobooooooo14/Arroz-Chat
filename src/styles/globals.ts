@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import SoraFont from "/fonts/Sora-VariableFont_wght.ttf?url"
 
-
 export default createGlobalStyle`
     html {
         scroll-behavior: smooth;

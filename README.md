@@ -4,7 +4,7 @@
   <img src="https://skillicons.dev/icons?i=ts,react,styledcomponents,vite" />
 </p>
 
-***
+---
 
 Arroz Chat is a chat project that uses Firebase features to build a real-time chat anywhere in the world.
 
