@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { addDoc, collection, serverTimestamp } from "firebase/firestore"
+import { useTranslation } from "react-i18next"
 
 import { Content, SendBtn, SendBtnIcon } from "./styles"
 
@@ -8,6 +9,8 @@ import Input from "../../Input"
 import { auth, databaseApp } from "../../../services/firebaseConfig"
 
 const ChatInput: React.FC = () => {
+  const { t } = useTranslation()
+
   const [inputText, setInputText] = useState("")
 
   const messageRef = collection(databaseApp, "messages")
@@ -31,7 +34,7 @@ const ChatInput: React.FC = () => {
   return (
     <Content>
       <Input
-        placeholder="Digite sua mensagem..."
+        placeholder={t("chat.input.messageplaceholder")}
         value={inputText}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
           setInputText(event.target.value)

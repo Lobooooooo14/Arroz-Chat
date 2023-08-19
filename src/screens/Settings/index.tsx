@@ -1,5 +1,6 @@
 import React from "react"
 import { NavigateFunction, useNavigate } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 import {
   Content,
@@ -19,15 +20,17 @@ import ScreenTitle from "../../components/ScreenTitle"
 import { auth } from "../../services/firebaseConfig"
 
 const Settings: React.FC = () => {
+  const { t } = useTranslation()
+
   const navigate: NavigateFunction = useNavigate()
 
   return (
-    <Screen title="Configurações">
+    <Screen title={t("settings.title")}>
       <Content>
         <Header>
           <LeftHeader>
             <ArrowLeft onClick={() => navigate(-1)} />
-            <ScreenTitle text="Configurações" />
+            <ScreenTitle text={t("settings.title")} />
           </LeftHeader>
         </Header>
         <Options>
@@ -40,8 +43,17 @@ const Settings: React.FC = () => {
             }}
           >
             <OptionLeft>
-              <h3>Sair</h3>
-              <p>Sair da conta</p>
+              <h3>{t("settings.options.exit.name")}</h3>
+              <p>{t("settings.options.exit.description")}</p>
+            </OptionLeft>
+            <OptionRight>
+              <ExitIcon />
+            </OptionRight>
+          </Option>
+          <Option onClick={() => {}}>
+            <OptionLeft>
+              <h3>{t("settings.options.language.name")}</h3>
+              <p>{t("settings.options.language.description")}</p>
             </OptionLeft>
             <OptionRight>
               <ExitIcon />
