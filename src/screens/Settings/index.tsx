@@ -9,7 +9,8 @@ import {
   Option,
   OptionLeft,
   OptionRight,
-  ExitIcon
+  ExitIcon,
+  LanguageIcon
 } from "./styles"
 
 import Screen from "../../components/Screen"
@@ -36,6 +37,19 @@ const Settings: React.FC = () => {
         <Options>
           <Option
             onClick={() => {
+              navigate("/settings/language")
+            }}
+          >
+            <OptionLeft>
+              <h3>{t("settings.options.language.name")}</h3>
+              <p>{t("settings.options.language.description")}</p>
+            </OptionLeft>
+            <OptionRight>
+              <LanguageIcon />
+            </OptionRight>
+          </Option>
+          <Option
+            onClick={() => {
               if (auth.currentUser) {
                 auth.signOut()
                 navigate("/login")
@@ -45,15 +59,6 @@ const Settings: React.FC = () => {
             <OptionLeft>
               <h3>{t("settings.options.exit.name")}</h3>
               <p>{t("settings.options.exit.description")}</p>
-            </OptionLeft>
-            <OptionRight>
-              <ExitIcon />
-            </OptionRight>
-          </Option>
-          <Option onClick={() => {}}>
-            <OptionLeft>
-              <h3>{t("settings.options.language.name")}</h3>
-              <p>{t("settings.options.language.description")}</p>
             </OptionLeft>
             <OptionRight>
               <ExitIcon />

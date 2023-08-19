@@ -9,20 +9,22 @@ i18n
   .use(LanguageDetector)
   .init({
     resources: {
-      enUS: {
-        translation: locale.en_us
+      en: {
+        translation: locale.en
       },
-      ptBR: {
-        translation: locale.pt_br
+      pt: {
+        translation: locale.pt
       }
     },
-    lng: "enUS",
+    lng: "en",
+    debug: false,
+    fallbackLng: false,
     interpolation: {
       escapeValue: false
     }
   })
 
 if (localStorage.getItem("language"))
-  i18n.changeLanguage(localStorage.getItem("language") ?? "enUS")
+  i18n.changeLanguage(localStorage.getItem("language") ?? "en")
 
 export default i18n

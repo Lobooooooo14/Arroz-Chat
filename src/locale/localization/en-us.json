@@ -25,5 +25,12 @@
         "description": "Select a language"
       }
     }
+  },
+  "selectlanguage": {
+    "title": "Select language",
+    "options": {
+      "en": "English",
+      "pt": "Portuguese"
+    }
   }
 }
