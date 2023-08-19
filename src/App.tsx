@@ -10,6 +10,8 @@ import SignUp from "./screens/SingUp"
 import ChatRoom from "./screens/ChatRoom"
 import Settings from "./screens/Settings"
 
+import "./classes/translation"
+
 const App: React.FC = () => {
   return (
     <>
