@@ -12,6 +12,7 @@ import {
   IDOptions,
   InitialValueOptions
 } from "react-firebase-hooks/firestore/dist/firestore/types"
+import { useTranslation } from "react-i18next"
 
 import { Avatar, Content, SettingsIcon } from "./styles"
 
@@ -25,6 +26,8 @@ import Messages from "../../components/Messages"
 import { auth, databaseApp } from "../../services/firebaseConfig"
 
 const Chat: React.FC = () => {
+  const { t } = useTranslation()
+
   const navigate: NavigateFunction = useNavigate()
 
   const messageRef = collection(databaseApp, "messages")
@@ -44,7 +47,7 @@ const Chat: React.FC = () => {
       <Header>
         <LeftHeader>
           {auth.currentUser && <Avatar src={auth.currentUser.photoURL!} />}
-          <ScreenTitle text="Arroz Chat" />
+          <ScreenTitle text={t("app.name")} />
         </LeftHeader>
         <RightHeader>
           <SettingsIcon onClick={() => navigate("/settings")} />

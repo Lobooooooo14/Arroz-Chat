@@ -1,0 +1,36 @@
+{
+  "app": {
+    "name": "Arroz Chat"
+  },
+  "login": {
+    "continue": {
+      "google": "Continuar com o Google",
+      "github": "Continuar com o Github"
+    }
+  },
+  "chat": {
+    "input": {
+      "messageplaceholder": "Digite sua mensagem..."
+    }
+  },
+  "settings": {
+    "title": "Configurações",
+    "options": {
+      "exit": {
+        "name": "Sair",
+        "description": "Sair da conta"
+      },
+      "language": {
+        "name": "Idioma",
+        "description": "Selecione um idioma"
+      }
+    }
+  },
+  "selectlanguage": {
+    "title": "Selecione um idioma",
+    "options": {
+      "en": "Inglês",
+      "pt": "Português"
+    }
+  }
+}

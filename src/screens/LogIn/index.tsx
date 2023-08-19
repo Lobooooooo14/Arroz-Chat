@@ -5,6 +5,7 @@ import {
   useSignInWithGithub,
   useAuthState
 } from "react-firebase-hooks/auth"
+import { useTranslation } from "react-i18next"
 
 import {
   Box,
@@ -22,6 +23,8 @@ import Screen from "../../components/Screen"
 import { auth } from "../../services/firebaseConfig"
 
 const SignUp: React.FC = () => {
+  const { t } = useTranslation()
+
   const navigate: NavigateFunction = useNavigate()
   const [user] = useAuthState(auth)
 
@@ -62,7 +65,7 @@ const SignUp: React.FC = () => {
               onClick={() => signInWithGoogle()}
             >
               <GoogleIcon />
-              Continuar com o Google
+              {t("login.continue.google")}
             </ContinueWithButton>
             <ContinueWithButton
               whileTap={{ scale: 0.9 }}
@@ -70,7 +73,7 @@ const SignUp: React.FC = () => {
               onClick={() => signInWithGithub()}
             >
               <GithubIcon />
-              Continuar com o Github
+              {t("login.continue.github")}
             </ContinueWithButton>
           </LogInBox>
         </Box>

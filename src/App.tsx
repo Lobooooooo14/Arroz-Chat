@@ -10,6 +10,9 @@ import SignUp from "./screens/SingUp"
 import ChatRoom from "./screens/ChatRoom"
 import Settings from "./screens/Settings"
 
+import "./classes/translation"
+import SelectLanguage from "./screens/SelectLanguage"
+
 const App: React.FC = () => {
   return (
     <>
@@ -20,6 +23,7 @@ const App: React.FC = () => {
           <Route path="login" element={<LogIn />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="settings/language" element={<SelectLanguage />} />
         </Routes>
       </ThemeProvider>
     </>

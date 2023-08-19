@@ -1,0 +1,36 @@
+{
+  "app": {
+    "name": "Arroz Chat"
+  },
+  "login": {
+    "continue": {
+      "google": "Continue with Google",
+      "github": "Continue with Github"
+    }
+  },
+  "chat": {
+    "input": {
+      "messageplaceholder": "Enter your message..."
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "options": {
+      "exit": {
+        "name": "Exit",
+        "description": "Sign out"
+      },
+      "language": {
+        "name": "Language",
+        "description": "Select a language"
+      }
+    }
+  },
+  "selectlanguage": {
+    "title": "Select language",
+    "options": {
+      "en": "English",
+      "pt": "Portuguese"
+    }
+  }
+}
