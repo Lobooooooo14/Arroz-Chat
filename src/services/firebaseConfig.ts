@@ -14,16 +14,15 @@ interface IFirebaseConfig {
 }
 
 const firebaseConfig: IFirebaseConfig = {
-  apiKey: "AIzaSyDtqiJgW3slfgIrsMmtwsIIl11pvHtOmRk",
-  authDomain: "arroz-chat.firebaseapp.com",
-  projectId: "arroz-chat",
-  storageBucket: "arroz-chat.appspot.com",
-  messagingSenderId: "481308224598",
-  appId: "1:481308224598:web:25d2df5468413aba859ff7",
-  measurementId: "G-Z4BMY3DV6G"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
+  measurementId: import.meta.env.VITE_MEASUREMENTID
 }
 
-// Initialize Firebase
 export const app: FirebaseApp = initializeApp(firebaseConfig)
 export const analytics: Analytics = getAnalytics(app)
 export const auth: Auth = getAuth(app)

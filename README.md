@@ -23,7 +23,9 @@ You can test Arroz Chat at [this link](https://arroz-chat.vercel.app).
    npm ci
    ```
 
-2. Run:
+2. Configure your firebase project
+
+3. Run:
 
    ```shell
    npm run dev
