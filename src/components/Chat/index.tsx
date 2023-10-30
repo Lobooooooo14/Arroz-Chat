@@ -38,7 +38,7 @@ const Chat: React.FC = () => {
     limit(50)
   )
 
-  const [messages] = useCollectionData<DocumentData>(queryMessages, {
+  const [collectionMessages] = useCollectionData<DocumentData>(queryMessages, {
     idField: "id"
   } as IDOptions<DocumentData> & InitialValueOptions<DocumentData[]>)
 
@@ -53,7 +53,7 @@ const Chat: React.FC = () => {
           <SettingsIcon onClick={() => navigate("/settings")} />
         </RightHeader>
       </Header>
-      <Messages messages={messages?.reverse()!} />
+      <Messages messages={collectionMessages?.reverse()!} />
       <ChatInput />
     </Content>
   )
