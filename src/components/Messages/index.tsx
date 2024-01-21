@@ -18,9 +18,9 @@ const Messages: React.FC<Props> = ({ messages }) => {
   return (
     <Content ref={scrollRef}>
       {messages &&
-        messages?.map((message, index) => (
+        messages?.map((message) => (
           <Bubble
-            key={index}
+            key={message.uid}
             text={message.text}
             uid={message.uid}
             username={message.username}
