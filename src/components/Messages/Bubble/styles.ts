@@ -16,6 +16,25 @@ export const Content = styled(motion.div)<{ $sent?: boolean }>`
     ${(props) =>
       transparentize(0.2, shade(0.8, props.theme.colors.bubbleColor))}
   );
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    ${(props) => (props.$sent ? "right" : "left")}: -5px;
+    width: 0;
+    height: 0;
+    border-top: 0 solid transparent;
+    border-bottom: 10px solid transparent;
+    ${(props) => (props.$sent ? "border-left" : "border-right")}: 5px solid
+      ${(props) =>
+      transparentize(
+        0.2,
+        shade(props.$sent ? 0.4 : 0.8, props.theme.colors.bubbleColor)
+      )};
+    z-index: 0;
+  }
 
   ${(props) =>
     props.$sent &&

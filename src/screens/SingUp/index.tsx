@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { NavigateFunction, useNavigate } from "react-router-dom"
-import { validateEmail, validatePassword, validateUsername } from "../../App"
+import { validateEmail, validatePassword, validateUsername } from "../../utils"
 import {
   Box,
   Content,
